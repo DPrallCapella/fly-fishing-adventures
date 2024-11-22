@@ -1,25 +1,15 @@
-html {
+/* Reset some sytles */
+html, body {
     height: 100%;
-    width: 100%;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+/* Base styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #f5f5dc; /*Beige*/
     color: #333; /*Off-black*/
-}
-
-header {
-    background-color: transparent;
-    color: #f5f5dc;
-    padding: 20px;
-    text-align: center;
-}
-
-header img {
-    max-width: 100px;
 }
 
 nav {
@@ -27,11 +17,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10px;
+    padding: 10px;
     width: 100%;
     box-sizing: border-box;
 }
 
+/* Logo Styles */
 .nav-left .logo {
     max-height: 50px;
     max-width: 50px;
@@ -40,6 +31,7 @@ nav {
     border: 2px solid #333;
 }
 
+/* Center Nav Links */
 .nav-center {
     display: flex;
     gap: 20px;
@@ -52,12 +44,71 @@ nav {
     transition: color 0.3s ease;
 }
 
-/* Dropdown specific styles */
+
+/* Style for the right-side icons */
+.nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+/* Hamburger Menu (hidden by default) */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #f5f5dc;
+}
+
+/* Hide nav-links by default on mobile */
 .nav-links {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
+    gap: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Center the logo */
+  .nav-left {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-center {
+    display: none; /* Hide the links */
+  }
+
+  /* Show hamburger menu */
+  .hamburger-menu {
+    display: block;
+  }
+
+  /* Nav links to show on mobile when the hamburger is clicked */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #2f4f4f;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  /* When mobile menu is active */
+  .nav-links.active {
+    display: flex;
+  }
 }
 
 .nav-item {
@@ -76,6 +127,17 @@ nav {
 
 .nav-item:hover > a {
     color: rgb(154, 218, 246); /* Change color on hover */
+}
+
+header {
+    background-color: transparent;
+    color: #f5f5dc;
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    max-width: 100px;
 }
 
 .dropdown {
@@ -120,11 +182,7 @@ nav {
     display: block;
 }
 
-/* Style for the right-side icons */
-.nav-right {
-    display: flex;
-    gap: 20px;
-}
+
 
 .nav-right .icon {
     width: 25px;

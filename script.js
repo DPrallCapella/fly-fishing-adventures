@@ -38,3 +38,30 @@ if (shareRadio.checked) {
   shareFields.style.display = 'block';
   requestFields.style.display = 'none';
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');  // Hamburger menu button
+    const navLinks = document.querySelector('.nav-links');      // Navigation links container
+    const logo = document.querySelector('.logo');               // Logo element
+    
+    // Toggle the hamburger menu on smaller screens
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');  // Toggle the 'active' class to show/hide nav
+    });
+  
+    // Adjust logo size and position for responsiveness
+    function adjustLogo() {
+      if (window.innerWidth <= 768) {
+        logo.style.maxHeight = '40px';   // Smaller logo on small screens
+        logo.style.maxWidth = '40px';    // Smaller logo on small screens
+      } else {
+        logo.style.maxHeight = '50px';   // Default logo size
+        logo.style.maxWidth = '50px';    // Default logo size
+      }
+    }
+  
+    // Listen to window resize to adjust logo and navbar
+    window.addEventListener('resize', adjustLogo);
+    adjustLogo();  // Call initially to set correct size
+  });
+  
