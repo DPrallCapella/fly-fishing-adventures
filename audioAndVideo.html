@@ -11,7 +11,7 @@
 
     <div class="nav-bar">
         <div class="logo-container">
-            <a href="#"><img src="Images/IMG_1.png" class="logo"></a>
+            <a href="index.html"><img src="Images/IMG_1.png" class="logo"></a>
         </div>
         <div class="nav-bar-links">
             <ul>
@@ -19,7 +19,7 @@
                 <li><a href="interests.html">My Interests</a></li>
                 <li><a href="gallery.html">Photos</a></li>
                 <li><a href="about.html">About Me</a></li>
-                <li><a href="Contact.html">Contact Me</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
             </ul>
         </div>
         <div class="hamburger-menu-button">
@@ -38,34 +38,21 @@
         </ul>
     </div>
 
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="Images/IMG_4277.jpeg" alt="Fishing on the South Platte River" onclick="openModal(this)">
-        </div>
-        <div class="gallery-item">
-            <img src="Images/IMG_5604.jpeg" alt="Exploring Monument Creek" onclick="openModal(this)">
-        </div>
-        <div class="gallery-item">
-            <img src="Images/IMG_5697.jpeg" alt="Fishing at Kettle 3 Lake" onclick="openModal(this)">
-        </div>
-        <div class="gallery-item">
-            <img src="Images/IMG_5752.PNG" alt="Meeting Tom Rosenbauer" onclick="openModal(this)">
-        </div>
-        <div class="gallery-item">
-            <img src="Images/IMG_5853.jpeg" alt="Trip to the Orvis store in Denver, CO" onclick="openModal(this)">
-        </div>
-        <div class="gallery-item">
-            <img src="Images/IMG_5891.jpeg" alt="Fishing Eleven Mile with my Younger Brother" onclick="openModal(this)">
-        </div>
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/TxD4deOR1LQ" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
     </div>
 
-
-    <!-- Modal -->
-    <div id="imageModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImage">
-        <div id="caption"></div>
-    </div>
+    <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
 
     <footer>
         <p>© 2024 Fly Fishing Adventures. All rights reserved.</p>
