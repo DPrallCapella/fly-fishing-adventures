@@ -5,13 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet" type="text/css">
+    <title>Contact</title>
 </head>
 
 <body>
 
     <div class="nav-bar">
         <div class="logo-container">
-            <a href="#"><img src="Images/IMG_1.png" class="logo"></a>
+            <a href="#"><img src="Images/IMG_1.png" class="logo" alt="Logo"></a>
         </div>
         <div class="nav-bar-links">
             <ul>
@@ -40,24 +41,62 @@
 
     <div class="contact-container">
         <h1>Contact Me</h1>
-        <form class="contact-form">
-            <div class="form-row">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name">
-            </div>
-            <div class="form-row">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email">
-            </div>
-            <div class="form-row">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Your message here"></textarea>
-            </div>
+        <form method="post" class="contact-form">
+            <fieldset>
+                <legend>Contact Information</legend>
+                <div class="form-row">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your Message</legend>
+                <div class="form-row">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message here" required></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+                <div class="form-row">
+                    <label>Contact Method:</label>
+                    <div>
+                        <input type="radio" id="emailContact" name="contactMethod" value="email" required>
+                        <label for="emailContact">Email</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="phoneContact" name="contactMethod" value="phone" required>
+                        <label for="phoneContact">Phone</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="subscribe">Subscribe to newsletter:</label>
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                </div>
+                <div class="form-row">
+                    <label for="reason">Reason for Contact:</label>
+                    <select id="reason" name="reason" required>
+                        <option value="" disabled selected>Select a reason</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Support</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </fieldset>
+
             <div class="form-row">
                 <button type="submit" class="submit-button">Send</button>
             </div>
         </form>
     </div>
+
 
     <footer>
         <p>© 2024 Fly Fishing Adventures. All rights reserved.</p>

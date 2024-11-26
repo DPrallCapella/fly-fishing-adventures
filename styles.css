@@ -473,7 +473,8 @@ footer p {
 }
 
 .form-row input,
-.form-row textarea {
+.form-row textarea,
+.form-row select {
     width: 100%;
     padding: 10px;
     font-size: 14px;
@@ -483,8 +484,22 @@ footer p {
 }
 
 .form-row input:focus,
-.form-row textarea:focus {
+.form-row textarea:focus,
+.form-row select:focus {
     border-color: #0066cc;
+}
+
+fieldset {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f1f1f1;
+}
+
+legend {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
 }
 
 .submit-button {
@@ -501,6 +516,7 @@ footer p {
 .submit-button:hover {
     background-color: #0066cc;
 }
+
 
 /* HOME PAGE */
 /* Grid Layout for Home Page */
