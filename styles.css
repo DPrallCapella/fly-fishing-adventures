@@ -392,8 +392,13 @@ footer p {
 }
 
 @keyframes zoom {
-    from { transform: scale(0); }
-    to { transform: scale(1); }
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
 
 .close {
@@ -406,7 +411,8 @@ footer p {
     cursor: pointer;
 }
 
-.close:hover, .close:focus {
+.close:hover,
+.close:focus {
     color: red;
     text-decoration: none;
     cursor: pointer;
@@ -422,7 +428,8 @@ footer p {
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
     .gallery-item {
-        flex: 1 1 calc(100% - 30px); /* Make it one column */
+        flex: 1 1 calc(100% - 30px);
+        /* Make it one column */
         max-width: calc(100% - 30px);
     }
 }
@@ -558,19 +565,14 @@ footer p {
     }
 }
 
-.video-container {
-    width: 100%; /* Take the full width of the parent container */
-    max-width: 640px; /* Limit to YouTube's default size */
-    aspect-ratio: 16 / 9; /* Enforces perfect 16:9 aspect ratio */
-    margin: auto; /* Center the video on the page */
-    position: relative; /* Maintain container's relative positioning */
-    top: 86px;
+.audio-and-video-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
-
-.video-container iframe {
-    width: 100%; /* Make iframe fill the container */
-    height: 100%; /* Maintain height proportionally */
-    border: none; /* Remove iframe border */
-}
-
-
