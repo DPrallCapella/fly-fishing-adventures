@@ -21,9 +21,6 @@
                 <li><a href="gallery.html">Photos</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="contact.html">Contact Me</a></li>
-                <li><a href="audioAndVideo.html">Examples</a></li>
-                <li><a href="invitation.html">Invitation</a></li>
-                <li><a href="volunteer.html">Volunteer</a></li>
             </ul>
         </div>
         <div class="hamburger-menu-button">
@@ -69,17 +66,19 @@
                 <legend>Preferences</legend>
                 <div class="form-row">
                     <label>Contact Method:</label>
-                    <div>
-                        <input type="radio" id="emailContact" name="contactMethod" value="email" required>
-                        <label for="emailContact">Email</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="phoneContact" name="contactMethod" value="phone" required>
-                        <label for="phoneContact">Phone</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="emailContact" name="contactMethod" value="email" required>
+                            <label for="emailContact">Email</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="phoneContact" name="contactMethod" value="phone" required>
+                            <label for="phoneContact">Phone</label>
+                        </div>
                     </div>
                 </div>
                 <div class="form-row">
-                    <label for="subscribe">Subscribe to newsletter:</label>
+                    <label for="subscribe" class="checkbox-label">Subscribe to newsletter:</label>
                     <input type="checkbox" id="subscribe" name="subscribe">
                 </div>
                 <div class="form-row">
@@ -101,11 +100,12 @@
     </div>
 
 
+
     <footer>
         <p>© 2024 Fly Fishing Adventures. All rights reserved.</p>
         <div class="footer-nav">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
         </div>
     </footer>
 
